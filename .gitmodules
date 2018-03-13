@@ -1,0 +1,3 @@
+[submodule "twitterAPI-wrapper"]
+	path = twitterAPI-wrapper
+	url = git@github.com:tomon9086/twitterAPI-wrapper.git
