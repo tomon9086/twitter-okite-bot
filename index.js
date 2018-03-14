@@ -13,7 +13,7 @@ setInterval(async () => {
 		if(v.text === "ねむい" || v.text === "ねむたい" || v.text === "眠い" || v.text === "眠たい") {
 			await twitter.postStatus("おきてえええええ", [await twitter.postMP4(await readFile("medias/okite.mp4"))], v.id_str)
 			// console.log("text", v.text, "\n url:", "https://twitter.com/statuses/" + v.id_str)
-			await writeFile(repliedIdLogFile, await readFile(repliedIdLogFile, "utf-8") + "\n" + v.id_str, "utf-8") }
+			await writeFile(repliedIdLogFile, await readFile(repliedIdLogFile, "utf-8") + "\n" + v.id_str, "utf-8")
 			repliedIds.push(v.id_str)
 		}
 	})
