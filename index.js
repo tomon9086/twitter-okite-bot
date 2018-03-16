@@ -6,8 +6,7 @@ const twitter = require("./twitterAPI-wrapper")
 
 const repliedIdLogFile = "replied-id.log"
 
-// setInterval(async () => {
-const hoge = async () => {
+setInterval(async () => {
 	// const repliedIdLog = await readFile(repliedIdLogFile, "utf-8")
 	const repliedIds = (await readFile(repliedIdLogFile, "utf-8")) ? (await readFile(repliedIdLogFile, "utf-8")).split("\n") : []
 	// await twitter.getHomeTimeline(100)
@@ -24,8 +23,7 @@ const hoge = async () => {
 		}
 	})
 	// console.log((await twitter.search("ねむ OR 眠", 100)).statuses.map((v) => { return v.text }).join("\n*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n"))
-};hoge()
-// }, 60000)
+}, 60000)
 
 async function awaitForEach(array, cb) {
 	for(let i = 0; i < array.length; i++) {
